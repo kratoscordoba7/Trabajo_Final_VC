@@ -9,7 +9,7 @@ Se han completado todas las tareas solicitadas de la **Trabajo final** para la a
 
 [![GitHub](https://img.shields.io/badge/GitHub-Heliot%20J.%20Segura%20Gonzalez-darkred?style=flat-square&logo=github)](https://github.com/kratoscordoba7)
 
-[![GitHub](https://img.shields.io/badge/GitHub-Alejandro%20David%20Arzola%20Saavedra%20-darkyellow?style=flat-square&logo=github)](https://github.com/AlejandroDavidArzolaSaavedra)
+[![GitHub](https://img.shields.io/badge/GitHub-Alejandro%20D.%20Arzola%20Saavedra%20-darkyellow?style=flat-square&logo=github)](https://github.com/AlejandroDavidArzolaSaavedra)
 
 ## 🛠️ Librerías Utilizadas
 
