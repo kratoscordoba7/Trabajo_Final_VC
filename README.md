@@ -13,10 +13,10 @@ Se han completado todas las tareas solicitadas de la **Trabajo final** para la a
 
 ## 🛠️ Librerías Utilizadas
 
-[![Python](https://img.shields.io/badge/Python-%2314354C?style=for-the-badge&logo=python&logoColor=white)](Link_To_Your_Python_Page)
-[![MediaPipe](https://img.shields.io/badge/MediaPipe-%230052CC?style=for-the-badge&logo=mediapipe)](Link_To_Your_MediaPipe_Page)
-[![MySQL](https://img.shields.io/badge/MySQL-%234479A1?style=for-the-badge&logo=mysql&logoColor=white)](Link_To_Your_MySQL_Page)
-
+[![OpenCV](https://img.shields.io/badge/OpenCV-%230076A8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
+[![OS](https://img.shields.io/badge/OS-%232196F3?style=for-the-badge&logo=linux&logoColor=white)](https://en.wikipedia.org/wiki/Operating_system)
+[![Imutils](https://img.shields.io/badge/Imutils-%23FFA500?style=for-the-badge)](https://pypi.org/project/imutils/)
+[![NumPy](https://img.shields.io/badge/NumPy-%23013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 
 
 ---
@@ -34,7 +34,7 @@ Para comenzar con el proyecto, sigue estos pasos:
 ### Paso 2: Clonar y trabajar en el proyecto localmente (VS Code)
 1. **Clona el repositorio**: Ejecuta el siguiente comando en tu terminal para clonar el repositorio:
    ```bash
-   git clone https://github.com/kratoscordoba7/VCTF.git
+   git clone https://github.com/kratoscordoba7/Trabajo_Final_VC.git
    ```
 2. Una vez clonado, todos los archivos han de estar situado en el environment del paso 1
 
@@ -42,41 +42,29 @@ Para comenzar con el proyecto, sigue estos pasos:
    ```bash
    conda activate NombreDeTuEnvironment
    ```
-Tras estos pasos debería poder ejecutar el proyecto localmente
 
----
+### Paso 4: Instalación
+Para instalar estas librerías, ejecuta los siguientes comandos:
+
+```bash
+pip install opencv-python
+pip install numpy
+pip install imutils
+```
+
+Tras estos pasos debería poder ejecutar el proyecto localmente
 
 <h2 align="center">📋 Tareas</h2>
 
 ### Tarea 1 Reconocimiento de caras
 
-El trabajo de curso tiene una temática de libre elección por parte del grupo de estudiantes, teniendo como requisito que integre técnicas de Visión por Computador, no existiendo requisitos por parte del software utilizado. Será admisible que el trabajo forme parte de un desarrollo presentado también para otra(s) asignatura(s), o como primeros pasos para el Trabajo Fin de Título (TFT). 
+El trabajo de curso en nuestro caso se enfoca en el reconocmiiento de caras:
 
-Si bien se fijará una fecha de entrega final de cara cada convocatoria, durante las sesiones del 28 y 29 de noviembre, en las sesiones prácticas se presentará la propuesta inicial del trabajo, de cara a recibir comentarios y consideraciones por parte del equipo docente.
+- Pretenciones futuras:
 
-Señalar que de cara a la evaluación del trabajo final se tendrán en cuenta los siguientes aspectos y sus correspondientes ponderaciones:
 
-- alcance y dificultad de la propuesta (45%)
-- calidad de la memoria (20%)
-- exposición y defensa (20%)
-- material audiovisual (15%)
 
-Con posterioridad a la fecha límite de entrega, preferiblemente coincidente con la fecha del examen de convocatoria, se llevará a cabo una presentación del trabajo (10'). En coherencia con los aspectos valorados, de cara a la entrega final por medio de un enlace a un repositorio, el material entregado debe ser completo, permitiendo la reproducibilidad del desarrollo. Se sugiere que contenga al menos los siguientes elementos:
 
-- Documento de memoria
-- Motivación/argumentación del trabajo
-- Objetivo de la propuesta
-- Descripción técnica del trabajo realizado
-- Fuentes y tecnologías utilizadas
-- Conclusiones y propuestas de ampliación
-- Indicación de herramientas/tecnologías con las que les hubiera gustado contar
-- Diario de reuniones del grupo
-- Créditos materiales no originales del grupo
-- Enlace al código fuente
-- Imágenes de entrenamiento (en su caso)
-- Imagen "carátula" del trabajo
-- Vídeo resumen de venta del trabajo
-- Todo aquel material que consideren de interés
 
 ---
 
