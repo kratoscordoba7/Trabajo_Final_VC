@@ -77,14 +77,8 @@ El trabajo de curso en nuestro caso se enfoca en el reconocmiiento de caras:
 
 ## 📚 Bibliografía
 
-1. [Opencv](https://docs.opencv.org/4.x/dc/da5/tutorial_py_drawing_functions.html)
-2. [Mondrian](https://www3.gobiernodecanarias.org/medusa/ecoescuela/sa/2017/04/17/descubriendo-a-mondrian/)
-3. [Marilyn POP ART](https://temasycomentariosartepaeg.blogspot.com/p/autor-andy-warhol-1928-1987-titulo.html)
-4. [Online OpenCV Compiler](https://python-fiddle.com/examples/opencv)
-5. [Stackoverflow type np uint8](https://stackoverflow.com/questions/64314899/how-does-numpy-astypenp-uint8-convert-a-float-array-1-2997805-became-255)
-6. [Stackoverflow how to change hue](https://stackoverflow.com/questions/67448555/python-opencv-how-to-change-hue-in-hsv-channels)
-7. [Stackoverflow how to cv2 minmaxloc](https://stackoverflow.com/questions/53292170/how-to-use-the-cv2-minmaxloc-in-template-matching)
-8. [GeeksforGeeks splitting and merging channels](https://www.geeksforgeeks.org/splitting-and-merging-channels-with-python-opencv/)
+1. [Opencv](https://docs.opencv.org/)
+
 
 ---
 
