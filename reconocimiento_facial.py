@@ -87,7 +87,7 @@ while True:
         print(f"¡Presione 'ESC' para abortar.")
         print(f"Espere mientras se captura su rostro...")
         
-    if count >= 300:
+    if count >= 100:
         print("Se han capturado suficientes rostros.")
         break
 
