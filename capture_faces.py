@@ -2,7 +2,16 @@ import cv2
 import os
 import imutils
 
-def capture_faces(person_name, data_path, model_file, weights_file):
+def dar_instrucciones(engine, person_name):
+    """El bot dará las instrucciones necesarias."""
+    instrucciones = (
+        f"Bienvenido {person_name}, coloque su rostro frente a la pantalla durante 3 segundos, "
+        "y gire la cabeza 90 grados hacia un lado y hacia el otro cada 3 segundos, por favor."
+    )
+    engine.say(instrucciones)
+    engine.runAndWait()
+
+def capture_faces(person_name, data_path, model_file, weights_file, engine):
     """
     Captura los rostros de la persona especificada y los guarda en la carpeta correspondiente.
     
@@ -13,6 +22,9 @@ def capture_faces(person_name, data_path, model_file, weights_file):
     """
     
     person_path = os.path.join(data_path, person_name)
+
+    # Dar las instrucciones al usuario
+    dar_instrucciones(engine, person_name)
 
     # Crear carpeta si no existe
     if not os.path.exists(person_path):

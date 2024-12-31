@@ -2,7 +2,17 @@ import os
 import cv2
 import numpy as np
 
-def train_recognizer(data_path, model_output_path='modelLBPHFace.xml'):
+def dar_instrucciones(engine):
+    """El bot dará las instrucciones necesarias."""
+    instrucciones = (
+        f"Estamos realizando el entrenamiento facial, "
+        "por favor espere."
+    )
+    engine.say(instrucciones)
+    engine.runAndWait()
+
+
+def train_recognizer(data_path, model_output_path='lbph.xml', engine=None):
     """
     Entrena un reconocedor de rostros usando LBPH a partir de las imágenes en data_path.
     
@@ -12,6 +22,9 @@ def train_recognizer(data_path, model_output_path='modelLBPHFace.xml'):
     
     print("Iniciando el entrenamiento...")
     people_list = os.listdir(data_path)
+
+     # Dar las instrucciones al usuario
+    dar_instrucciones(engine)
 
     labels = []
     faces_data = []

@@ -2,6 +2,19 @@ import os
 from capture_faces import capture_faces
 from train_recognizer import train_recognizer
 from recognize_faces import recognize_faces
+import pyttsx3
+import logging
+
+logging.getLogger("comtypes").setLevel(logging.ERROR)
+
+# Configuracion del motor de texto a voz
+
+def iniciar_tts():
+    """Inicializa y configura el motor de texto a voz."""
+    engine = pyttsx3.init()
+    engine.setProperty('rate', 150)
+    engine.setProperty('volume', 1)
+    return engine
 
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -9,7 +22,11 @@ if __name__ == "__main__":
     data_path = os.path.join(script_dir, "userData")
     model_file = os.path.join(script_dir, "deploy.prototxt.txt")
     weights_file = os.path.join(script_dir, "res10_300x300_ssd_iter_140000.caffemodel")
-    model_lbph_path = os.path.join(script_dir, "modelLBPHFace.xml")
+    model_lbph_path = os.path.join(script_dir, "lbph.xml")
+    
+    # Inicializar el motor de texto a voz
+    engine = iniciar_tts()
+
 
     print("Bienvenido al Reconocedor Facial de Heliot y Alejandro!")
     print("Seleccione el modo de operación:")
@@ -27,11 +44,12 @@ if __name__ == "__main__":
             person_name=person_name,
             data_path=data_path,
             model_file=model_file,
-            weights_file=weights_file
+            weights_file=weights_file,
+            engine=engine
         )
 
         # 2. Entrenamiento de reconocimiento facial
-        train_recognizer(data_path=data_path, model_output_path=model_lbph_path)
+        train_recognizer(data_path=data_path, model_output_path=model_lbph_path, engine=engine)
 
         # 3. Reconocimiento facial en tiempo real
         recognize_faces(
@@ -39,7 +57,8 @@ if __name__ == "__main__":
             model_file=model_file,
             weights_file=weights_file,
             model_lbph_path=model_lbph_path,
-            frames_to_confirm=10  # Número de frames que deben coincidir
+            frames_to_confirm=10,  # Número de frames que deben coincidir
+            engine=engine
         )
 
     elif mode == "2":
@@ -53,7 +72,8 @@ if __name__ == "__main__":
                 model_file=model_file,
                 weights_file=weights_file,
                 model_lbph_path=model_lbph_path,
-                frames_to_confirm=10  # Número de frames que deben coincidir
+                frames_to_confirm=10,  # Número de frames que deben coincidir
+                engine=engine
             )
     else:
         print("Modo inválido. Por favor, ejecute nuevamente y seleccione una opción válida.")

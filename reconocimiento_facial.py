@@ -123,7 +123,7 @@ def entrenar_reconocedor():
     face_recognizer.train(facesData, np.array(labels))
 
     # Almacenando el modelo obtenido
-    face_recognizer.write('modelLBPHFace.xml')
+    face_recognizer.write('lbph.xml')
     print("Modelo almacenado...")
 
 entrenar_reconocedor()
@@ -138,7 +138,7 @@ imagePaths = os.listdir(dataPath)
 face_recognizer = cv2.face.LBPHFaceRecognizer_create()
 
 # Leyendo el modelo de reconocimiento facial
-face_recognizer.read('modelLBPHFace.xml')
+face_recognizer.read('lbph.xml')
 
 # Obtener el directorio del script actual
 scriptDir = os.path.dirname(os.path.abspath(__file__))

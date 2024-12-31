@@ -1,1 +1,6 @@
+# Directorios y archivos a ignorar
 userData
+__pycache__
+lbph.xml
+recognize_faces.log 
+# TODO IGNORA database.sql

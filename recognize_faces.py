@@ -53,10 +53,11 @@ def recognize_faces(
     data_path, 
     model_file, 
     weights_file, 
-    model_lbph_path='modelLBPHFace.xml',
+    model_lbph_path='lbph.xml',
     frames_to_confirm=30,  # Aumentado a 30 frames según tu solicitud
     max_distance=50,
-    max_missing_frames=5
+    max_missing_frames=5,
+    engine=None
 ):
     """
     Reconoce rostros en tiempo real utilizando un modelo LBPH.
