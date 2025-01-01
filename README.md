@@ -229,7 +229,7 @@ En cuanto al entrenamiento, utilizamos diferentes métodos como LBPH, Eigenfaces
 La fórmula matemática es la siguiente:
 
 $$
-S(w_1, w_2, w_3) = \sum_{i=1}^{n} \left( w_1 \cdot F_i(w) + w_2 \cdot E_i(w) + w_3 \cdot L_i(w) \right)
+S(w_1, w_2, w_3, w_n..) = \sum_{i=1}^{n} \left( w_1 \cdot F_i(w) + w_2 \cdot E_i(w) + w_3 \cdot L_i(w) \cdot\cdot\cdot\right)
 $$
 
 Donde:
