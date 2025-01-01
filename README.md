@@ -199,13 +199,18 @@ Los demás archivos que encontrarás en el proyecto son autogenerados por el pro
 
 ### Conclusiones y propuestas de ampliación, propuestas adicionales
 
+La verdad es que hemos aprendido mucho sobre las técnicas implementadas y, a través de pruebas e investigación, logramos alcanzar el objetivo que nos habíamos propuesto inicialmente. Aunque algunas de estas técnicas las contemplábamos dentro del ámbito de la biometría de la asignatura, el hecho de probarlas y comprobar que realmente funcionan nos sorprendió gratamente.
 
-%%%%>
+- Una ampliación interesante, observando diversas páginas sobre reconocimiento facial, sería integrar el proyecto en una **Raspberry Pi**. La razón es que podría resultar muy útil aplicarlo en la entrada de una casa, donde la Raspberry Pi sería capaz de reconocer a la persona y abrir la puerta automáticamente. Además, podría encender las luces y realizar otras acciones dentro de la casa una vez haya reconocido al usuario.
+
+- Otra aplicación potencial sería su integración en plataformas web, como aquellas utilizadas por la **tesorería** o sitios que requieren certificados como el DNI electrónico. Esto podría mejorar la seguridad, evitando la necesidad de introducir contraseñas o recibir códigos PIN, ya que el reconocimiento facial serviría como una forma de autenticación más rápida y segura.
+
+- También sería interesante integrar esta tecnología en una **aplicación móvil** para el control de asistencia. Esta sería una medida adicional de seguridad, ya que permitiría verificar que la persona que pasa la asistencia es realmente quien dice ser, evitando que alguien pase la asistencia de otra persona utilizando solo sus credenciales. Esto ocurre con frecuencia en algunas universidades, donde se verifica la asistencia de manera digital, pero a menudo una persona pasa la asistencia de otro solo por compartir el código o las credenciales. Con esta aplicación, se podría requerir que el usuario se reconozca mediante reconocimiento facial y se tome una foto al momento de registrar su asistencia.
 
 
 ### Indicación de herramientas/tecnologías con las que les hubiera gustado contar / Aspectos a mejorar
 
-Nos hubiera encantado contar con herramientas que pudieran integrar OpenCV con el desarrollo web de manera fácil, para mejorar la UI e incluso implementarlas en una aplicación web. Otras herramientas, como dlib, que generan muchos conflictos, también nos hubiera gustado probarlas. Vimos que tienen mucho potencial, pero no pudimos probarlas adecuadamente debido a problemas de incompatibilidades.
+Nos hubiera encantado contar con herramientas que pudieran integrar OpenCV con el desarrollo web de manera fácil, para mejorar la UI e incluso implementarlas en una aplicación web. Otras herramientas, como dlib, que generan muchos conflictos, también nos hubiera gustado probarlas. Vimos que tienen mucho potencial, pero no pudimos probarlas adecuadamente debido a problemas de incompatibilidades. Librerías como face_recognition requerían un alto consumo de recursos computacionales y funcionaban de manera bastante lenta. Dado que buscábamos una solución rápida, decidimos no optar por esta opción, aunque hubiera sido interesante probarla.
 
 ### Reuniones del grupo
 
@@ -222,30 +227,62 @@ En cuanto al entrenamiento, utilizamos diferentes métodos como LBPH, Eigenfaces
 La fórmula matemática es la siguiente:
 
 $$
-\sum D_N \times AG_N + \ldots
+\sum FF_1 \times AG_1 + LBPF_2 \times AG_2 + EF_3 \times AG_3 \ldots
 $$
+
+Esa seria la formula generica mas externa la caja exterior, internamente la podemos dividir en 3 partes
+
+La **función objetivo** de Fisher.
+
+$$
+   J(w) = \frac{|\tilde{m}_1 - \tilde{m}_2|^2}{\tilde{s}_1^2 + \tilde{s}_2^2}
+$$
+
+El **LBP** en un píxel central \((x_c, y_c)\) se calcula como:
+
+$$
+   LBP(x_c, y_c) = \sum_{p=0}^{P-1} 2^p \cdot s(i_p - i_c)
+$$
+
+La **función objetivo** de Eigenface.
+
+$$
+   J(w) = \frac{|\tilde{m}_1 - \tilde{m}_2|^2}{\tilde{s}_1^2 + \tilde{s}_2^2}
+$$
+
+
+
+
+
+
 
 
 ### Vídeo resumen de venta del trabajo
 
-VIDEO
+Aqui debe ir el video
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 
 ---
+
 
 > [!IMPORTANT]  
 > Los decisiones de las implementaciones realizadas han sido recomendadas por [otsedom](https://github.com/otsedom/otsedom.github.io/tree/main/VC).
 
 ---
 
-## 📚 Fuentes y tecnologías utilizadas
+## 📚 Fuentes y Tecnologías Utilizadas
 
-1. [Opencv](https://docs.opencv.org/)
-2. [Tutorial face]([https://docs.opencv.org/](https://docs.opencv.org/4.x/da/d60/tutorial_face_main.html#tutorial_face_eigenfaces))
-3. [Algoritmo hungarian](https://en.wikipedia.org/wiki/Hungarian_algorithm)
-4. [Algoritmos geneticos](https://anderfernandez.com/blog/algoritmo-genetico-en-python/)
-5. [Reconocimiento facial](https://omes-va.com/face-recognition-python/)
-6. [Hungarian](https://python.plainenglish.io/hungarian-algorithm-introduction-python-implementation-93e7c0890e15)
-
+1. **Documentación Oficial de OpenCV** [Enlace a la documentación](https://docs.opencv.org/)
+2. **Tutorial sobre Reconocimiento Facial con OpenCV**  [Enlace al tutorial](https://docs.opencv.org/4.x/da/d60/tutorial_face_main.html#tutorial_face_eigenfaces)
+3. **Introducción al Algoritmo Húngaro**  [Enlace al artículo](https://en.wikipedia.org/wiki/Hungarian_algorithm)
+4. **Implementación de Algoritmos Genéticos en Python** [Enlace al blog](https://anderfernandez.com/blog/algoritmo-genetico-en-python/)
+5. **Reconocimiento Facial con Python y OpenCV**  [Enlace al tutorial](https://omes-va.com/face-recognition-python/)
+6. **Guía del Algoritmo Húngaro en Python**  [Enlace al artículo](https://python.plainenglish.io/hungarian-algorithm-introduction-python-implementation-93e7c0890e15)
 
 ---
 
@@ -255,6 +292,7 @@ VIDEO
 
 EII - Grado de Ingeniería Informática  
 Obra bajo licencia de Creative Commons Reconocimiento - No Comercial 4.0 Internacional
-<br><br><br>
+
+Tienen total libertad para utilizar el código. Espero que este repositorio haya sido de utilidad. Al final, ha sido una experimentación para ver qué lográbamos alcanzar con los recursos disponibles.
 
 ---
