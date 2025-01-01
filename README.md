@@ -293,6 +293,6 @@ Your browser does not support the video tag.
 EII - Grado de Ingeniería Informática  
 Obra bajo licencia de Creative Commons Reconocimiento - No Comercial 4.0 Internacional
 
-Tienen total libertad para utilizar el código. Espero que este repositorio haya sido de utilidad. Al final, ha sido una experimentación para ver qué lográbamos alcanzar con los recursos disponibles.
+Tienen total libertad para utilizar el código. Espero que este repositorio haya sido de utilidad. Al final, queriamos ver qué lográbamos alcanzar con los recursos disponibles.
 
 ---
