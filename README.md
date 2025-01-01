@@ -266,19 +266,45 @@ $$
    J(w) = \frac{|\tilde{m}_1 - \tilde{m}_2|^2}{\tilde{s}_1^2 + \tilde{s}_2^2}
 $$
 
-El **LBP** en un píxel central \((x_c, y_c)\) se calcula como:
+El **LBP**  \((x_c, y_c)\) se calcula como:
 
 $$
    LBP(x_c, y_c) = \sum_{p=0}^{P-1} 2^p \cdot s(i_p - i_c)
 $$
 
-La **función objetivo** de Eigenface.
+Para cada pixel vecino, se compara su intensidad con la intensidad del pixel central 
 
 $$
-   J(w) = \frac{|\tilde{m}_1 - \tilde{m}_2|^2}{\tilde{s}_1^2 + \tilde{s}_2^2}
+s(x) = 
+\begin{cases} 
+1 & \text{si } x \geq 0 \\
+0 & \text{si } x < 0
+\end{cases}
 $$
 
+La **función objetivo** de Eigenface:
 
+Primero se calcula la **media de las imágenes** en el conjunto de entrenamiento y luego se calcula la **matriz de covarianza** entre todas las imágenes.
+
+$$
+   \mu = \frac{1}{N} \sum_{i=1}^{N} x_i
+$$
+
+$$
+   C = \frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)(x_i - \mu)^T
+$$
+
+Los **eigenvectores vi** y **eigenvalores** de la matriz de covarianza proporcionan la base del espacio de menor dimensión que describe mejor la variabilidad de los datos:
+
+$$
+C v_i = \lambda_i \cdot v_i \quad \text{para} \quad i = 1, 2, \ldots, n
+$$
+
+Las imágenes de entrada se proyectan sobre el espacio de los eigenfaces (componentes principales) para obtener una representación de baja dimensión
+
+$$
+E(w) = \text{Proyección de la imagen en el subespacio de Eigenfaces}
+$$
 
 
 
