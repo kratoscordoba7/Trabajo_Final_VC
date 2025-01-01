@@ -75,11 +75,9 @@ Nuestro trabajo de curso se centra en el <b>reconocimiento facial</b>, una temá
 Consideramos que el <b>reconocimiento facial</b> es un área <b>fascinante</b> ✨ que permite aplicar <b>técnicas y metodologías avanzadas de visión por computador</b> , ofreciendo una <b>oportunidad única</b> para explorar y desarrollar <b>soluciones innovadoras</b>. 💡
 <br><br>
 
-<h2>Alcance y objetivo de la propuesta</h2>
+### Alcance y objetivo de la propuesta
 
-
-%%%%>
-
+Nuestro objetivo ha sido poder **reconocer personas** y **identificarlas**, ya sea de manera individual o en grupos, explorando distintas técnicas, librerías y tecnologías que nos permitieran investigar y probar hasta **dónde podíamos llegar**. 🔍💡 Durante el proceso, nos enfocamos en experimentar con diversas herramientas y enfoques, con la intención de maximizar el rendimiento y obtener resultados óptimos. 👩‍💻📊
 
 ### Uso/Controles 📖💻
 
