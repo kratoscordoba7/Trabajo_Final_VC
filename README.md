@@ -360,7 +360,7 @@ Your browser does not support the video tag.
 
 
 > [!IMPORTANT]  
-> Los decisiones de las implementaciones realizadas han sido recomendadas por [otsedom](https://github.com/otsedom/otsedom.github.io/tree/main/VC).
+> Los decisiones de las implementaciones realizadas han sido recomendadas por [otsedom](https://github.com/otsedom/otsedom.github.io/tree/main/VC) y José Ignacio Salas Cáceres.
 
 ---
 
