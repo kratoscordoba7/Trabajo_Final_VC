@@ -157,7 +157,7 @@ class FaceIdentity:
 
 ```
 
-El siguiente fragmento utiliza el algoritmo de asignación de Hungarian para resolver la asociación entre las detecciones de rostros actuales y las identidades previamente rastreadas. Es crucial porque:
+El siguiente fragmento utiliza el algoritmo Húngaro para resolver la asociación entre las detecciones de rostros actuales y las identidades previamente rastreadas. Es crucial porque:
 
 ```Python
 # Resolver la asignación óptima
