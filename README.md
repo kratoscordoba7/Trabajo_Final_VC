@@ -314,7 +314,7 @@ Your browser does not support the video tag.
 
 ---
 
-<img align="left" width="140" height="140" src="https://github.com/user-attachments/assets/ed3617f0-9c77-44b2-a15b-b48052b0c9a4"></a>
+<img align="left" width="160" height="160" src="https://github.com/user-attachments/assets/ed3617f0-9c77-44b2-a15b-b48052b0c9a4"></a>
 
 **Universidad de Las Palmas de Gran Canaria**  
 
