@@ -337,6 +337,7 @@ Your browser does not support the video tag.
 4. **Implementación de Algoritmos Genéticos en Python** [Enlace al blog](https://anderfernandez.com/blog/algoritmo-genetico-en-python/)
 5. **Reconocimiento Facial con Python y OpenCV**  [Enlace al tutorial](https://omes-va.com/face-recognition-python/)
 6. **Guía del Algoritmo Húngaro en Python**  [Enlace al artículo](https://python.plainenglish.io/hungarian-algorithm-introduction-python-implementation-93e7c0890e15)
+7. **Universidad Michigan** [Enlace al artículo](https://web.eecs.umich.edu/~jjcorso/t/598F14/files/lecture_eigenfaces.pdf)
 
 ---
 
