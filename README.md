@@ -260,11 +260,44 @@ es el número total de casos de prueba (pueden ser varias imágenes o muestras).
 
 ---
 
-La **función objetivo** de Fisher.
+Algoritmo del Método Eigenfaces
+
+1. **Cálculo de la media:**
+   
+$$
+\mu = \frac{1}{n} \sum_{i=1}^n x_i
+$$
+
+2. **Cálculo de la matriz de covarianza \( S \):**
+   
+$$
+S = \frac{1}{n} \sum_{i=1}^n (x_i - \mu)(x_i - \mu)^T
+$$
+
+3. **Cálculo de los autovalores \( \lambda_i \) y autovectores \( v_i \) de \( S \):**
 
 $$
-   J(w) = \frac{|\tilde{m}_1 - \tilde{m}_2|^2}{\tilde{s}_1^2 + \tilde{s}_2^2}
+S v_i = \lambda_i v_i, \quad i = 1, 2, \dots, n
 $$
+
+4. **Ordenar los autovectores:**
+  
+5. **Proyección al subespacio PCA:**
+   Las \( k \) componentes principales del vector observado \( z \) están dadas por:
+
+$$
+y = W^T (z - \mu)
+$$
+   
+donde 
+
+$$
+\( W = [v_1, v_2, \dots, v_k] \).
+$$
+
+
+---
+
 
 El **LBP**  \((x_c, y_c)\) se calcula como:
 
@@ -281,6 +314,8 @@ s(x) =
 0 & \text{si } x < 0
 \end{cases}
 $$
+
+---
 
 La **función objetivo** de Eigenface:
 
