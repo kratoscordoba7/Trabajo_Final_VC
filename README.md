@@ -60,7 +60,11 @@ Para instalar estas librerías, ejecuta los siguientes comandos:
 ```bash
 pip install opencv-contrib-python numpy scipy imutils pyttsx3
 ```
+o
 
+```bash
+pip install -r requirements.txt
+```
 Tras estos pasos debería poder ejecutar el proyecto localmente
 
 <h2>📋 Motivación/argumentación del trabajo</h2>
