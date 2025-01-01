@@ -229,10 +229,36 @@ En cuanto al entrenamiento, utilizamos diferentes métodos como LBPH, Eigenfaces
 La fórmula matemática es la siguiente:
 
 $$
-\sum FF_1 \times AG_1 + LBPF_2 \times AG_2 + EF_3 \times AG_3 \ldots
+S(w_1, w_2, w_3) = \sum_{i=1}^{n} \left( w_1 \cdot F_i(w) + w_2 \cdot E_i(w) + w_3 \cdot L_i(w) \right)
 $$
 
-Esa seria la formula generica mas externa la caja exterior, internamente la podemos dividir en 3 partes
+Donde:
+
+$$ 
+S(w_1, w_2, w_3) 
+$$ 
+
+es el puntaje total ponderado.
+
+$$ 
+F_i(w) \), \( E_i(w) \), y \( L_i(w) 
+$$ 
+
+son los resultados de cada técnica (Fisherfaces, Eigenfaces y LBP) para el **i-ésimo** caso de prueba (por ejemplo, una imagen o un conjunto de características).
+
+$$ 
+w_1, w_2, w_3 
+$$ 
+
+son los **pesos** asignados por el algoritmo genético para cada técnica.
+
+$$ 
+n 
+$$ 
+
+es el número total de casos de prueba (pueden ser varias imágenes o muestras).
+
+---
 
 La **función objetivo** de Fisher.
 
