@@ -1,7 +1,7 @@
 <h1 align="center">🤖Trabajo Final - VC Reconocimiento facial 24/25</h1>
 
 <div align="center">
-<img width="500px" src="https://github.com/user-attachments/assets/289b1a6a-7d16-42c2-8441-e4f4a2aa0509">
+<img width="500px" src="assets/img/portada.png">
 </div>
 
 Se ha completado el **Trabajo final** para la asignatura **Visión por Computador**.  Reconocimiento Facial. Consiste en aplicar distintas tecnicas
@@ -69,7 +69,7 @@ Tras estos pasos debería poder ejecutar el proyecto localmente
 
 <h2>📋 Motivación/argumentación del trabajo</h2>
 
-<img align="left" width="200px" src="https://github.com/user-attachments/assets/7573a72a-704f-4b29-a32a-7dd498ed0183">  
+<img align="left" width="200px" src="assets/img/model.png">  
 Nuestro trabajo de curso se centra en el <b>reconocimiento facial</b>, una temática que nos despierta <b>curiosidad</b> 🧐 debido al funcionamiento y comportamiento de las <b>aplicaciones típicas nativas en dispositivos móviles</b> 📱 de la última década. 
 <br><br>
 Consideramos que el <b>reconocimiento facial</b> es un área <b>fascinante</b> ✨ que permite aplicar <b>técnicas y metodologías avanzadas de visión por computador</b> , ofreciendo una <b>oportunidad única</b> para explorar y desarrollar <b>soluciones innovadoras</b>. 💡
@@ -84,7 +84,7 @@ Nuestro objetivo ha sido poder **reconocer personas** y **identificarlas**, ya s
 Una vez tengamos todas las librerías instaladas, debemos dirigirnos al archivo `main.py` y ejecutarlo. Para ello, basta con hacer clic en el botón indicado en la imagen siguiente: 
 
 <div align="center">
-   <img width="800px" src="https://github.com/user-attachments/assets/9fbc2553-0708-4b54-b8f7-93a1f19b5e54">
+   <img width="800px" src="assets/img/how_to_run.png">
 </div>
 
 Al iniciar el programa, este nos dará la bienvenida y nos ofrecerá dos opciones para seleccionar. Estas opciones están diseñadas pensando en la flexibilidad del usuario:  
@@ -100,7 +100,7 @@ Esta separación permite que el usuario pueda elegir lo que necesita sin tener q
 
 Si el usuario introduce "1", el programa solicitará un nombre que se utilizará para etiquetar correctamente el rostro durante el reconocimiento. Por ejemplo:  
 
-<img src="/assets/img/modo1.gif">
+<img src="assets/img/modo1.gif">
 
 Tras escribir el nombre, se abrirá una ventana con la cámara. En esta ventana, se indicará que al pulsar la tecla **"S"**, comenzará la captura del rostro. Para obtener mejores resultados en el reconocimiento, se recomienda:  
 
@@ -110,7 +110,7 @@ Tras escribir el nombre, se abrirá una ventana con la cámara. En esta ventana,
 Aquí puedes ver un ejemplo del proceso:  
 
 <div align="center">
-   <img src="/assets/img/modo1_parte2.gif">
+   <img src="assets/img/modo1_parte2.gif">
 </div>
 
 #### **Modo 2: Reconocimiento Directo 🔍🤖**
@@ -123,7 +123,7 @@ Si el usuario introduce "2", el programa intentará reconocer el rostro directam
 Aquí tienes una demostración del funcionamiento:  
 
 <div align="center">
-   <img src="/assets/img/modo2.gif">
+   <img src="assets/img/modo2.gif">
 </div>
 
 ###  Descripción técnica del trabajo realizado
@@ -241,7 +241,7 @@ $$
 es el puntaje total ponderado.
 
 $$ 
-F_i(w) \), \( E_i(w) \), y \( L_i(w) 
+F_i(w) ), ( E_i(w) ), y ( L_i(w) 
 $$ 
 
 son los resultados de cada técnica (Fisherfaces, Eigenfaces y LBP) para el **i-ésimo** caso de prueba (por ejemplo, una imagen o un conjunto de características).
@@ -292,7 +292,7 @@ $$
 donde 
 
 $$
-\( W = [v_1, v_2, \dots, v_k] \).
+   (W = [v_1, v_2, \dots, v_k] )
 $$
 
 
@@ -377,7 +377,7 @@ Your browser does not support the video tag.
 
 ---
 
-<img align="left" width="160" height="160" src="https://github.com/user-attachments/assets/ed3617f0-9c77-44b2-a15b-b48052b0c9a4"></a>
+<img align="left" width="160" height="160" src="assets/img/face_final.png"></a>
 
 **Universidad de Las Palmas de Gran Canaria**  
 
