@@ -374,6 +374,7 @@ Your browser does not support the video tag.
 6. **Guía del Algoritmo Húngaro en Python**  [Enlace al artículo](https://python.plainenglish.io/hungarian-algorithm-introduction-python-implementation-93e7c0890e15)
 7. **Universidad Michigan** [Enlace al pdf](https://web.eecs.umich.edu/~jjcorso/t/598F14/files/lecture_eigenfaces.pdf)
 8. **Rasberry Pi Reconocimiento Facial** [Enlace al artículo](https://pyimagesearch.com/2018/06/25/raspberry-pi-face-recognition/)
+9. **Face spoofing detection** [Enlace al artículo](https://link.springer.com/article/10.1007/s10044-020-00937-x) 
 
 ---
 
