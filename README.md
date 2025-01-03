@@ -343,7 +343,7 @@ $$
 
 El entrenamiento mediante algoritmos genéticos se lleva a cabo aplicando mutación, cruzamiento y selección utilizando la librería `deap`. Al ejecutar el archivo `genetic_algorithm.py`, se inicia el proceso descrito a continuación:
 
-<img src="assets/img/entrenamiento.git" alt="Esquema de Entrenamiento">
+<img src="assets/img/entrenamiento.gif" alt="Esquema de Entrenamiento">
 
 Se emplea la selección por torneo como método para elegir a los mejores individuos en cada generación. En este proceso, se otorga mayor importancia al modelo LBPH debido a que, durante la experimentación, se observó que este método ofrecía el mejor desempeño en términos de precisión.
 
