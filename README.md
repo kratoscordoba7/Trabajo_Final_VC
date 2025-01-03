@@ -250,7 +250,7 @@ def train_and_save_model(images, labels, model_type, output_path):
 ```
 
 
-El código del entrenamiento del reconocimiento facial se basa en utilizar tres técnicas diferentes: **LBP (Local Binary Patterns)**, **Eigenfaces** y **Fisherfaces**. Aquí se explica el flujo de este código:
+El código del entrenamiento del reconocimiento facial se basa en utilizar tres técnicas diferentes: **LBPH (Local Binary Patterns Histograms)**, **Eigenfaces** y **Fisherfaces**. Aquí se explica el flujo de este código:
 
 1. **Preprocesamiento de imágenes (`preprocess_images`)**:
     - **Entrada**: Recibe una lista de rutas de imágenes (`image_paths`) y un tipo de escala (`scale_type`), que puede ser `'grayscale'`, `'noise_fourier'`.
@@ -262,10 +262,11 @@ El código del entrenamiento del reconocimiento facial se basa en utilizar tres 
     - **Salida**: Una lista de imágenes preprocesadas según el tipo de escala indicado.
 
 2. **Entrenamiento:
-    - **Entrada**: Recibe las imágenes preprocesadas, las etiquetas correspondientes, el tipo a entrenar (puede ser `'lbp'`, `'eigenfaces'` o `'fisherfaces'`).
+    - **Entrada**: Recibe las imágenes preprocesadas, las etiquetas correspondientes, el tipo a entrenar (puede ser `'lbph'`, `'eigenfaces'` o `'fisherfaces'`).
     - **Proceso**:
-        - Dependiendo del tipo seleccionado (`lbp`, `eigenfaces` o `fisherfaces`), se crea el respectivo reconocedor.
+        - Dependiendo del tipo seleccionado (`lbph`, `eigenfaces` o `fisherfaces`), se crea el respectivo reconocedor.
 
+---
 
 El objetivo del algoritmo genético es encontrar una combinación de pesos que optimice el rendimiento del sistema de reconocimiento facial. Se utiliza la librería `DEAP` para implementar este algoritmo.
 
