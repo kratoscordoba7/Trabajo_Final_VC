@@ -341,8 +341,13 @@ $$
 E(w) = \text{Proyección de la imagen en el subespacio de Eigenfaces}
 $$
 
+El entrenamiento mediante algoritmos genéticos se lleva a cabo aplicando mutación, cruzamiento y selección utilizando la librería `deap`. Al ejecutar el archivo `genetic_algorithm.py`, se inicia el proceso descrito a continuación:
 
+<img src="assets/img/entrenamiento.git" alt="Esquema de Entrenamiento">
 
+Se emplea la selección por torneo como método para elegir a los mejores individuos en cada generación. En este proceso, se otorga mayor importancia al modelo LBPH debido a que, durante la experimentación, se observó que este método ofrecía el mejor desempeño en términos de precisión.
+
+En orden de relevancia, el segundo modelo con mejor comportamiento fue Eigenfaces, seguido por Fisherfaces, que mostró el rendimiento más bajo entre los tres. Por esta razón, el algoritmo da prioridad a los pesos asociados a LBPH, asignándoles una mayor influencia en el proceso de combinación de resultados.
 
 
 
