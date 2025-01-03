@@ -28,6 +28,7 @@ de recocimiento facial para poder reconocer personas.
 [![SciPy](https://img.shields.io/badge/SciPy-%23045A8D?style=for-the-badge&logo=scipy&logoColor=white)](https://scipy.org/)
 [![Logging](https://img.shields.io/badge/Logging-%23FF0000?style=for-the-badge&logo=python&logoColor=white)](https://docs.python.org/3/library/logging.html)
 [![pyttsx3](https://img.shields.io/badge/pyttsx3-%23013243?style=for-the-badge&logo=python&logoColor=white)](https://pyttsx3.readthedocs.io/en/latest/)
+[![DEAP](https://img.shields.io/badge/DEAP-%23B29F94?style=for-the-badge)](https://deap.readthedocs.io/en/master/)
 
 ---
 
