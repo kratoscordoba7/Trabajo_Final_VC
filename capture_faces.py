@@ -13,12 +13,12 @@ def dar_instrucciones(engine, person_name):
 
 def capture_faces(person_name, data_path, model_file, weights_file, engine):
     """
-    Captura los rostros de la persona especificada y los guarda en la carpeta correspondiente.
-    
-    :param person_name: Nombre de la persona para asignar la carpeta donde se guardarán las imágenes.
-    :param data_path: Ruta base donde se almacenan todas las carpetas de usuarios.
-    :param model_file: Ruta al archivo .prototxt del modelo DNN.
-    :param weights_file: Ruta al archivo .caffemodel del modelo DNN.
+        Captura los rostros de la persona especificada y los guarda en la carpeta correspondiente.
+        
+        :param person_name: Nombre de la persona para asignar la carpeta donde se guardarán las imágenes.
+        :param data_path: Ruta base donde se almacenan todas las carpetas de usuarios.
+        :param model_file: Ruta al archivo .prototxt del modelo DNN.
+        :param weights_file: Ruta al archivo .caffemodel del modelo DNN.
     """
     
     person_path = os.path.join(data_path, person_name)
@@ -26,25 +26,21 @@ def capture_faces(person_name, data_path, model_file, weights_file, engine):
     # Dar las instrucciones al usuario
     dar_instrucciones(engine, person_name)
 
-    # Crear carpeta si no existe
     if not os.path.exists(person_path):
         print('Carpeta creada:', person_path)
         os.makedirs(person_path)
 
-    # Comprobar la existencia de los archivos del modelo DNN
     if not os.path.exists(model_file) or not os.path.exists(weights_file):
         print("Error: No se encuentran los archivos del modelo en las rutas especificadas.")
         return
 
-    # Cargar el modelo de detección de rostros
     net = cv2.dnn.readNetFromCaffe(model_file, weights_file)
-
     print("Por favor, colóquese en el centro de la cámara y presione 'S' para iniciar la captura de rostros.")
     print("Estableciendo cámara...")
 
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     count = 0
-    start = False  # Flag para controlar la captura
+    start = False
 
     while True:
         ret, frame = cap.read()
@@ -66,7 +62,6 @@ def capture_faces(person_name, data_path, model_file, weights_file, engine):
         net.setInput(blob)
         detections = net.forward()
 
-        # Mostrar mensaje de instrucción
         if not start:
             cv2.putText(
                 frame, 
@@ -98,7 +93,6 @@ def capture_faces(person_name, data_path, model_file, weights_file, engine):
                     box = detections[0, 0, i, 3:7] * [w, h, w, h]
                     x, y, x1, y1 = box.astype("int")
 
-                    # Dibujar el rectángulo del rostro
                     cv2.rectangle(frame, (x, y), (x1, y1), (10, 193, 255), 3)
 
                     rostro = frame[y:y1, x:x1]
@@ -109,7 +103,6 @@ def capture_faces(person_name, data_path, model_file, weights_file, engine):
                     except Exception as e:
                         print(f"Error al guardar rostro: {e}")
 
-        # Mostrar frame
         cv2.imshow('Frame', frame)
         k = cv2.waitKey(1)
 

@@ -8,7 +8,6 @@ import logging
 logging.getLogger("comtypes").setLevel(logging.ERROR)
 
 # Configuracion del motor de texto a voz
-
 def iniciar_tts():
     """Inicializa y configura el motor de texto a voz."""
     engine = pyttsx3.init()
@@ -20,13 +19,12 @@ if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     data_path = os.path.join(script_dir, "userData")
-    model_file = os.path.join(script_dir, "deploy.prototxt.txt")
-    weights_file = os.path.join(script_dir, "res10_300x300_ssd_iter_140000.caffemodel")
-    model_lbph_path = os.path.join(script_dir, "lbph.xml")
+    model_file = os.path.join(script_dir, "./weights/deploy.prototxt.txt")
+    weights_file = os.path.join(script_dir, "./weights/res10_300x300_ssd_iter_140000.caffemodel")
+    model_lbph_path = os.path.join(script_dir, "./weights/lbph_ycrcb.xml")
     
     # Inicializar el motor de texto a voz
     engine = iniciar_tts()
-
 
     print("Bienvenido al Reconocedor Facial de Heliot y Alejandro!")
     print("Seleccione el modo de operación:")
@@ -49,7 +47,7 @@ if __name__ == "__main__":
         )
 
         # 2. Entrenamiento de reconocimiento facial
-        train_recognizer(data_path=data_path, model_output_path=model_lbph_path, engine=engine)
+        train_recognizer(data_path=data_path, engine=engine)
 
         # 3. Reconocimiento facial en tiempo real
         recognize_faces(

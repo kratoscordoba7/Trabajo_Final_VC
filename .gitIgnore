@@ -1,6 +1,12 @@
 # Directorios y archivos a ignorar
-userData
 __pycache__
 lbph.xml
 recognize_faces.log 
-# TODO IGNORA database.sql
+weights/eigenfaces_noise_fourier.xml
+weights/fisherfaces_grayscale.xml
+weights/lbph_ycrcb.xml
+userData/*
+!userData/unknown/
+
+
+

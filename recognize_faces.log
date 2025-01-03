@@ -1,0 +1,495 @@
+2025-01-03 09:08:35,395 - INFO - Nombres de usuarios cargados: ['Jorge', 'unknown']
+2025-01-03 09:08:37,610 - INFO - LBPH, Eigenfaces, FisherFaces cargado correctamente.
+2025-01-03 09:08:37,656 - INFO - DNN cargado correctamente.
+2025-01-03 09:08:37,988 - INFO - Cámara inicializada correctamente.
+2025-01-03 09:08:38,068 - INFO - package: mysql.connector.plugins
+2025-01-03 09:08:38,069 - INFO - plugin_name: caching_sha2_password
+2025-01-03 09:08:38,069 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-01-03 09:08:38,340 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:38,341 - INFO - Centroides detectados: [(352, 280)]
+2025-01-03 09:08:38,341 - INFO - Total de identidades actuales: 0
+2025-01-03 09:08:38,416 - INFO - Creada nueva identidad: ID 1 en centroid (352, 280)
+2025-01-03 09:08:38,416 - INFO - Incrementado missing_frames para identidad 1: 1
+2025-01-03 09:08:38,433 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:38,434 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:38,537 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:38,537 - INFO - Centroides detectados: [(352, 278)]
+2025-01-03 09:08:38,539 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:38,539 - INFO - Matriz de costos:
+2025-01-03 09:08:38,539 - INFO - [[2.0]]
+2025-01-03 09:08:38,539 - INFO - Identidad 1 asignada a Detección 0 con distancia 2.0
+2025-01-03 09:08:38,556 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:38,556 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:38,606 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:38,607 - INFO - Centroides detectados: [(352, 279)]
+2025-01-03 09:08:38,608 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:38,608 - INFO - Matriz de costos:
+2025-01-03 09:08:38,608 - INFO - [[1.0]]
+2025-01-03 09:08:38,609 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:38,625 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:38,625 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:38,659 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:38,660 - INFO - Centroides detectados: [(352, 279)]
+2025-01-03 09:08:38,661 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:38,661 - INFO - Matriz de costos:
+2025-01-03 09:08:38,661 - INFO - [[0.0]]
+2025-01-03 09:08:38,662 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:38,679 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:38,680 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:38,713 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:38,714 - INFO - Centroides detectados: [(352, 279)]
+2025-01-03 09:08:38,715 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:38,715 - INFO - Matriz de costos:
+2025-01-03 09:08:38,717 - INFO - [[0.0]]
+2025-01-03 09:08:38,717 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:38,736 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:38,737 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:38,789 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:38,789 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:38,790 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:38,790 - INFO - Matriz de costos:
+2025-01-03 09:08:38,791 - INFO - [[1.0]]
+2025-01-03 09:08:38,791 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:38,810 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:38,811 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:38,848 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:38,849 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:38,849 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:38,850 - INFO - Matriz de costos:
+2025-01-03 09:08:38,850 - INFO - [[1.0]]
+2025-01-03 09:08:38,851 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:38,870 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:38,870 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:38,914 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:38,915 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:38,916 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:38,916 - INFO - Matriz de costos:
+2025-01-03 09:08:38,917 - INFO - [[1.0]]
+2025-01-03 09:08:38,917 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:38,933 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:38,933 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:38,968 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:38,969 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:38,969 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:38,970 - INFO - Matriz de costos:
+2025-01-03 09:08:38,970 - INFO - [[0.0]]
+2025-01-03 09:08:38,971 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:38,988 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:38,988 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,029 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,030 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:39,031 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,031 - INFO - Matriz de costos:
+2025-01-03 09:08:39,032 - INFO - [[1.0]]
+2025-01-03 09:08:39,032 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:39,049 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,050 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,051 - INFO - Etiqueta confirmada para identidad 1: Jorge
+2025-01-03 09:08:39,091 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,092 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:39,093 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,093 - INFO - Matriz de costos:
+2025-01-03 09:08:39,094 - INFO - [[0.0]]
+2025-01-03 09:08:39,094 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:39,110 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,111 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,154 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,154 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:39,155 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,156 - INFO - Matriz de costos:
+2025-01-03 09:08:39,156 - INFO - [[1.0]]
+2025-01-03 09:08:39,157 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:39,174 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,174 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,207 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,207 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:39,208 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,208 - INFO - Matriz de costos:
+2025-01-03 09:08:39,208 - INFO - [[0.0]]
+2025-01-03 09:08:39,209 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:39,227 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,227 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,271 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,272 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:39,272 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,273 - INFO - Matriz de costos:
+2025-01-03 09:08:39,273 - INFO - [[0.0]]
+2025-01-03 09:08:39,274 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:39,293 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,294 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,327 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,327 - INFO - Centroides detectados: [(353, 278)]
+2025-01-03 09:08:39,328 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,328 - INFO - Matriz de costos:
+2025-01-03 09:08:39,328 - INFO - [[1.0]]
+2025-01-03 09:08:39,329 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:39,345 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,346 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,387 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,388 - INFO - Centroides detectados: [(354, 279)]
+2025-01-03 09:08:39,389 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,389 - INFO - Matriz de costos:
+2025-01-03 09:08:39,390 - INFO - [[1.4142135623730951]]
+2025-01-03 09:08:39,390 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.4142135623730951
+2025-01-03 09:08:39,410 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,411 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,445 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,446 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:39,446 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,447 - INFO - Matriz de costos:
+2025-01-03 09:08:39,447 - INFO - [[1.0]]
+2025-01-03 09:08:39,448 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:39,469 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,469 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,507 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,508 - INFO - Centroides detectados: [(354, 280)]
+2025-01-03 09:08:39,508 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,508 - INFO - Matriz de costos:
+2025-01-03 09:08:39,508 - INFO - [[1.4142135623730951]]
+2025-01-03 09:08:39,509 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.4142135623730951
+2025-01-03 09:08:39,524 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,524 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,558 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,558 - INFO - Centroides detectados: [(354, 279)]
+2025-01-03 09:08:39,559 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,559 - INFO - Matriz de costos:
+2025-01-03 09:08:39,560 - INFO - [[1.0]]
+2025-01-03 09:08:39,560 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:39,576 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,576 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,615 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,616 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:39,616 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,617 - INFO - Matriz de costos:
+2025-01-03 09:08:39,617 - INFO - [[1.0]]
+2025-01-03 09:08:39,618 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:39,633 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,634 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,667 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,668 - INFO - Centroides detectados: [(354, 279)]
+2025-01-03 09:08:39,668 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,669 - INFO - Matriz de costos:
+2025-01-03 09:08:39,669 - INFO - [[1.0]]
+2025-01-03 09:08:39,670 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:39,688 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,689 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,730 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,732 - INFO - Centroides detectados: [(354, 279)]
+2025-01-03 09:08:39,732 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,732 - INFO - Matriz de costos:
+2025-01-03 09:08:39,732 - INFO - [[0.0]]
+2025-01-03 09:08:39,734 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:39,751 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,751 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,798 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,798 - INFO - Centroides detectados: [(354, 279)]
+2025-01-03 09:08:39,799 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,800 - INFO - Matriz de costos:
+2025-01-03 09:08:39,800 - INFO - [[0.0]]
+2025-01-03 09:08:39,801 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:39,818 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,818 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,861 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,862 - INFO - Centroides detectados: [(354, 279)]
+2025-01-03 09:08:39,862 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,863 - INFO - Matriz de costos:
+2025-01-03 09:08:39,863 - INFO - [[0.0]]
+2025-01-03 09:08:39,864 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:39,881 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,882 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,926 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,926 - INFO - Centroides detectados: [(354, 280)]
+2025-01-03 09:08:39,926 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,927 - INFO - Matriz de costos:
+2025-01-03 09:08:39,927 - INFO - [[1.0]]
+2025-01-03 09:08:39,927 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:39,943 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:39,944 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:39,995 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:39,997 - INFO - Centroides detectados: [(354, 279)]
+2025-01-03 09:08:39,998 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:39,998 - INFO - Matriz de costos:
+2025-01-03 09:08:39,999 - INFO - [[1.0]]
+2025-01-03 09:08:39,999 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:40,015 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,016 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,059 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,060 - INFO - Centroides detectados: [(353, 278)]
+2025-01-03 09:08:40,060 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,060 - INFO - Matriz de costos:
+2025-01-03 09:08:40,061 - INFO - [[1.4142135623730951]]
+2025-01-03 09:08:40,061 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.4142135623730951
+2025-01-03 09:08:40,078 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,082 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,131 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,131 - INFO - Centroides detectados: [(354, 279)]
+2025-01-03 09:08:40,132 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,132 - INFO - Matriz de costos:
+2025-01-03 09:08:40,133 - INFO - [[1.4142135623730951]]
+2025-01-03 09:08:40,134 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.4142135623730951
+2025-01-03 09:08:40,157 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,157 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,203 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,204 - INFO - Centroides detectados: [(354, 279)]
+2025-01-03 09:08:40,204 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,204 - INFO - Matriz de costos:
+2025-01-03 09:08:40,205 - INFO - [[0.0]]
+2025-01-03 09:08:40,205 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:40,223 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,223 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,267 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,267 - INFO - Centroides detectados: [(354, 279)]
+2025-01-03 09:08:40,268 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,268 - INFO - Matriz de costos:
+2025-01-03 09:08:40,268 - INFO - [[0.0]]
+2025-01-03 09:08:40,269 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:40,286 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,286 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,337 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,338 - INFO - Centroides detectados: [(354, 281)]
+2025-01-03 09:08:40,338 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,338 - INFO - Matriz de costos:
+2025-01-03 09:08:40,339 - INFO - [[2.0]]
+2025-01-03 09:08:40,339 - INFO - Identidad 1 asignada a Detección 0 con distancia 2.0
+2025-01-03 09:08:40,359 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,360 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,407 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,407 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:40,407 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,408 - INFO - Matriz de costos:
+2025-01-03 09:08:40,408 - INFO - [[1.4142135623730951]]
+2025-01-03 09:08:40,408 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.4142135623730951
+2025-01-03 09:08:40,425 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,425 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,472 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,472 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:40,473 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,473 - INFO - Matriz de costos:
+2025-01-03 09:08:40,474 - INFO - [[0.0]]
+2025-01-03 09:08:40,474 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:40,490 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,491 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,535 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,537 - INFO - Centroides detectados: [(354, 280)]
+2025-01-03 09:08:40,537 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,538 - INFO - Matriz de costos:
+2025-01-03 09:08:40,538 - INFO - [[1.0]]
+2025-01-03 09:08:40,539 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:40,554 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,555 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,601 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,601 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:40,602 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,603 - INFO - Matriz de costos:
+2025-01-03 09:08:40,603 - INFO - [[1.0]]
+2025-01-03 09:08:40,603 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:40,621 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,621 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,665 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,665 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:40,666 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,667 - INFO - Matriz de costos:
+2025-01-03 09:08:40,667 - INFO - [[1.0]]
+2025-01-03 09:08:40,667 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:40,684 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,684 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,723 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,724 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:40,724 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,724 - INFO - Matriz de costos:
+2025-01-03 09:08:40,725 - INFO - [[1.0]]
+2025-01-03 09:08:40,726 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:40,744 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,744 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,782 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,782 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:40,783 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,784 - INFO - Matriz de costos:
+2025-01-03 09:08:40,784 - INFO - [[1.0]]
+2025-01-03 09:08:40,785 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:40,801 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,802 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,832 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,833 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:40,833 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,834 - INFO - Matriz de costos:
+2025-01-03 09:08:40,834 - INFO - [[1.0]]
+2025-01-03 09:08:40,834 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:40,850 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,851 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,887 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,888 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:40,888 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,889 - INFO - Matriz de costos:
+2025-01-03 09:08:40,889 - INFO - [[0.0]]
+2025-01-03 09:08:40,889 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:40,904 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,905 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,936 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,936 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:40,937 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,937 - INFO - Matriz de costos:
+2025-01-03 09:08:40,938 - INFO - [[1.0]]
+2025-01-03 09:08:40,938 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:40,953 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:40,953 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:40,992 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:40,992 - INFO - Centroides detectados: [(353, 278)]
+2025-01-03 09:08:40,993 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:40,993 - INFO - Matriz de costos:
+2025-01-03 09:08:40,993 - INFO - [[1.0]]
+2025-01-03 09:08:40,993 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:41,009 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,009 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,052 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,052 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,053 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,053 - INFO - Matriz de costos:
+2025-01-03 09:08:41,053 - INFO - [[2.0]]
+2025-01-03 09:08:41,053 - INFO - Identidad 1 asignada a Detección 0 con distancia 2.0
+2025-01-03 09:08:41,070 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,071 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,114 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,115 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,115 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,116 - INFO - Matriz de costos:
+2025-01-03 09:08:41,116 - INFO - [[0.0]]
+2025-01-03 09:08:41,116 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:41,134 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,135 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,167 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,168 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,168 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,168 - INFO - Matriz de costos:
+2025-01-03 09:08:41,168 - INFO - [[0.0]]
+2025-01-03 09:08:41,169 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:41,185 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,185 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,224 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,225 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,225 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,226 - INFO - Matriz de costos:
+2025-01-03 09:08:41,226 - INFO - [[0.0]]
+2025-01-03 09:08:41,226 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:41,243 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,243 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,277 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,278 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,278 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,278 - INFO - Matriz de costos:
+2025-01-03 09:08:41,279 - INFO - [[0.0]]
+2025-01-03 09:08:41,279 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:41,295 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,295 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,332 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,333 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:41,333 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,334 - INFO - Matriz de costos:
+2025-01-03 09:08:41,334 - INFO - [[1.0]]
+2025-01-03 09:08:41,335 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:41,352 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,353 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,393 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,393 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,394 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,394 - INFO - Matriz de costos:
+2025-01-03 09:08:41,394 - INFO - [[1.0]]
+2025-01-03 09:08:41,395 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:41,412 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,413 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,454 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,455 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,455 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,455 - INFO - Matriz de costos:
+2025-01-03 09:08:41,457 - INFO - [[0.0]]
+2025-01-03 09:08:41,457 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:41,473 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,473 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,515 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,516 - INFO - Centroides detectados: [(353, 281)]
+2025-01-03 09:08:41,516 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,516 - INFO - Matriz de costos:
+2025-01-03 09:08:41,518 - INFO - [[1.0]]
+2025-01-03 09:08:41,518 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:41,534 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,535 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,573 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,574 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,574 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,575 - INFO - Matriz de costos:
+2025-01-03 09:08:41,576 - INFO - [[1.0]]
+2025-01-03 09:08:41,576 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:41,591 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,591 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,623 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,623 - INFO - Centroides detectados: [(353, 279)]
+2025-01-03 09:08:41,624 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,624 - INFO - Matriz de costos:
+2025-01-03 09:08:41,624 - INFO - [[1.0]]
+2025-01-03 09:08:41,624 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:41,641 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,642 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,691 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,692 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,692 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,693 - INFO - Matriz de costos:
+2025-01-03 09:08:41,693 - INFO - [[1.0]]
+2025-01-03 09:08:41,694 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:41,711 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,712 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,744 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,745 - INFO - Centroides detectados: [(353, 281)]
+2025-01-03 09:08:41,745 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,745 - INFO - Matriz de costos:
+2025-01-03 09:08:41,746 - INFO - [[1.0]]
+2025-01-03 09:08:41,746 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:41,763 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,763 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,809 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,809 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,810 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,810 - INFO - Matriz de costos:
+2025-01-03 09:08:41,810 - INFO - [[1.0]]
+2025-01-03 09:08:41,810 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:41,826 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,826 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,865 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,867 - INFO - Centroides detectados: [(353, 281)]
+2025-01-03 09:08:41,868 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,869 - INFO - Matriz de costos:
+2025-01-03 09:08:41,869 - INFO - [[1.0]]
+2025-01-03 09:08:41,869 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:41,886 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,886 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,936 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,937 - INFO - Centroides detectados: [(353, 281)]
+2025-01-03 09:08:41,937 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,937 - INFO - Matriz de costos:
+2025-01-03 09:08:41,938 - INFO - [[0.0]]
+2025-01-03 09:08:41,938 - INFO - Identidad 1 asignada a Detección 0 con distancia 0.0
+2025-01-03 09:08:41,953 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:41,953 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:41,988 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:41,989 - INFO - Centroides detectados: [(353, 280)]
+2025-01-03 09:08:41,989 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:41,990 - INFO - Matriz de costos:
+2025-01-03 09:08:41,990 - INFO - [[1.0]]
+2025-01-03 09:08:41,990 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:42,008 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:42,008 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:42,067 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:42,068 - INFO - Centroides detectados: [(352, 275)]
+2025-01-03 09:08:42,068 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:42,068 - INFO - Matriz de costos:
+2025-01-03 09:08:42,069 - INFO - [[5.0990195135927845]]
+2025-01-03 09:08:42,069 - INFO - Identidad 1 asignada a Detección 0 con distancia 5.0990195135927845
+2025-01-03 09:08:42,088 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:42,089 - INFO - lbph_result True, eigen_result False, fisher_result True
+2025-01-03 09:08:42,127 - INFO - Rostros detectados en el frame: 1
+2025-01-03 09:08:42,128 - INFO - Centroides detectados: [(352, 274)]
+2025-01-03 09:08:42,128 - INFO - Total de identidades actuales: 1
+2025-01-03 09:08:42,128 - INFO - Matriz de costos:
+2025-01-03 09:08:42,129 - INFO - [[1.0]]
+2025-01-03 09:08:42,129 - INFO - Identidad 1 asignada a Detección 0 con distancia 1.0
+2025-01-03 09:08:42,151 - INFO - Resultado :0.2,  0.7999999999999999
+2025-01-03 09:08:42,152 - INFO - lbph_result True, eigen_result False, fisher_result True
