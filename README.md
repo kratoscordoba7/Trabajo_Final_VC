@@ -58,7 +58,7 @@ Para comenzar con el proyecto, sigue estos pasos:
 Para instalar estas librerías, ejecuta los siguientes comandos:
 
 ```bash
-pip install opencv-contrib-python numpy scipy imutils pyttsx3
+pip install opencv-contrib-python numpy scipy imutils pyttsx3 mysql-connector-python deap
 ```
 o
 
@@ -126,6 +126,21 @@ Aquí tienes una demostración del funcionamiento:
    <img src="assets/img/modo2.gif">
 </div>
 
+Por otro lado, al ejecutar el archivo `genetic_algorithm.py`, se realizará el entrenamiento con los datos disponibles hasta el momento, con el objetivo de optimizar las ponderaciones asignadas a los algoritmos LBPH, Eigenfaces y Fisherfaces.
+
+Los resultados del entrenamiento se guardarán en la base de datos. Posteriormente, al ejecutar nuevamente el archivo `main.py`, se utilizarán los datos almacenados en la base de datos, si están disponibles, para mejorar el rendimiento del sistema.
+
+Se recomienda seguir los siguientes pasos para probar el sistema:  
+
+1. Ejecutar `main.py` en el modo 1.  
+2. Ejecutar `main.py` en el modo 2.  
+3. Ejecutar `genetic_algorithm.py` para realizar el entrenamiento.  
+4. Ejecutar nuevamente `main.py` en el modo 2, automáticamente usara los datos almacenados en la base de datos.
+
+> [!IMPORTANT]  
+> El modo 2 requiere que hayas ingresado al modo 1 al menos una vez; de lo contrario, no será posible ejecutarlo. Asimismo, para el entrenamiento con el algoritmo genético, se recomienda ejecutar el modo 1 previamente, ya que esto permite capturar los datos necesarios para un entrenamiento adecuado.
+
+
 ###  Descripción técnica del trabajo realizado
 
 Se enfatizan los aspectos más relevantes del proyecto.
@@ -185,7 +200,182 @@ for row, col in zip(row_ind, col_ind):
 4. **Prevención de errores**:
    - Si una detección no cumple con el criterio de distancia, no se asigna, reduciendo la probabilidad de errores en la identificación.
 
+
+```Python
+def preprocess_images(image_paths, scale_type):
+    """
+        Preprocesa las imágenes según el tipo de escala especificado.
+        :param image_paths: Lista de rutas de imágenes.
+        :param scale_type: Tipo de escala ('hsv', 'ycrcb', 'grayscale', 'noise_fourier').
+        :return: Lista de imágenes preprocesadas.
+    """
+    preprocessed_images = []
+
+    for path in image_paths:
+        image = cv2.imread(path)
+
+        if scale_type == 'grayscale':
+            gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        elif scale_type == 'noise_fourier':
+            gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            f = np.fft.fft2(gray_image)
+            fshift = np.fft.fftshift(f)
+            magnitude_spectrum = 20 * np.log(np.abs(fshift) + 1)
+            gray_image = magnitude_spectrum.astype(np.uint8)
+        else:
+            raise ValueError("Tipo de escala desconocido: " + scale_type)
+
+        preprocessed_images.append(gray_image)
+
+    return preprocessed_images
+
+def train_and_save_model(images, labels, model_type, output_path):
+    """
+        :param images: Lista de imágenes preprocesadas.
+        :param output_path: Ruta donde se almacenará los embeddings .
+    """
+    if model_type == 'lbph':
+        recognizer = cv2.face.LBPHFaceRecognizer_create()
+    elif model_type == 'eigenfaces':
+        recognizer = cv2.face.EigenFaceRecognizer_create()
+    elif model_type == 'fisherfaces':
+        recognizer = cv2.face.FisherFaceRecognizer_create()
+    else:
+        raise ValueError("Tipo de modelo desconocido: " + model_type)
+
+    print(f"Entrenando embeddings {model_type}...")
+    recognizer.train(images, np.array(labels))
+    recognizer.write(output_path)
+    print(f"Embeddings {model_type} guardado en: {output_path}")
+```
+
+
+El código del entrenamiento del reconocimiento facial se basa en utilizar tres técnicas diferentes: **LBP (Local Binary Patterns)**, **Eigenfaces** y **Fisherfaces**. Aquí se explica el flujo de este código:
+
+1. **Preprocesamiento de imágenes (`preprocess_images`)**:
+    - **Entrada**: Recibe una lista de rutas de imágenes (`image_paths`) y un tipo de escala (`scale_type`), que puede ser `'grayscale'`, `'noise_fourier'`.
+    - **Proceso**:
+        - Para cada imagen en la lista, el código la lee usando `cv2.imread(path)`.
+        - Si el tipo de escala es `'grayscale'`, convierte la imagen a escala de grises usando `cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)`.
+        - Si el tipo de escala es `'noise_fourier'`, primero convierte la imagen a escala de grises, luego aplica la Transformada Rápida de Fourier (FFT) para obtener la frecuencia de la imagen y genera un espectro de magnitudes que se utiliza como la imagen preprocesada.
+        - Las imágenes preprocesadas se almacenan en una lista que luego se retorna.
+    - **Salida**: Una lista de imágenes preprocesadas según el tipo de escala indicado.
+
+2. **Entrenamiento:
+    - **Entrada**: Recibe las imágenes preprocesadas, las etiquetas correspondientes, el tipo a entrenar (puede ser `'lbp'`, `'eigenfaces'` o `'fisherfaces'`).
+    - **Proceso**:
+        - Dependiendo del tipo seleccionado (`lbp`, `eigenfaces` o `fisherfaces`), se crea el respectivo reconocedor.
+
+
+El objetivo del algoritmo genético es encontrar una combinación de pesos que optimice el rendimiento del sistema de reconocimiento facial. Se utiliza la librería `DEAP` para implementar este algoritmo.
+
+- **Creación de individuos**:
+  ```python
+     creator.create("FitnessMax", base.Fitness, weights=(1.0,))
+     creator.create("Individual", list, fitness=creator.FitnessMax)
+  ```
+  
+- **Función de fitness**:
+  La función `evaluate` se utiliza para evaluar el rendimiento con los pesos dados por un individuo. Este score se utiliza para evaluar qué tan bien el individuo realiza la tarea de reconocimiento facial:
+  
+  ```python
+  def evaluate(individual):
+      precision = simulate_model_with_weights(individual)
+      return precision,
+  ```
+
+- **Simulación del modelo con pesos**:
+  La función `simulate_model_with_weights` toma los pesos de un individuo y ajusta el comportamiento del sistema de reconocimiento facial. 
+
+```python
+def simulate_model_with_weights(individual):
+    total_scores = []
+    for _ in range(5):  # Procesar 5 frames para mayor robustez
+        ret, frame = cap.read() 
+        if not ret:
+            logging.warning("No se pudo leer el frame de la cámara.")
+            continue
+
+        frame = cv2.resize(frame, (640, 480))
+        h, w = frame.shape[:2]
+
+        # Detectar el rostro
+        blob = cv2.dnn.blobFromImage(
+            frame, 
+            scalefactor=1.0, 
+            size=(300, 300), 
+            mean=(104.0, 177.0, 123.0), 
+            swapRB=False, 
+            crop=False
+        )
+        net.setInput(blob)
+        detections = net.forward()
+
+        # Evaluamos cada detección
+        for i in range(detections.shape[2]):
+            confidence = detections[0, 0, i, 2]
+            if confidence > 0.5:  # Umbral de confianza
+                box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
+                x, y, x1, y1 = box.astype("int")
+                x, y = max(0, x), max(0, y)
+                x1, y1 = min(w - 1, x1), min(h - 1, y1)
+                rostro = frame[y:y1, x:x1]
+                rostro_gray = cv2.cvtColor(rostro, cv2.COLOR_BGR2GRAY)
+                rostro_resized = cv2.resize(rostro_gray, (150, 150), interpolation=cv2.INTER_CUBIC)
+
+                lbph_result_HSV = face_recognizer_lbp.predict(rostro_resized)
+                fisher_result_GRAY = face_recognizer_fisherfaces.predict(rostro_resized)
+                eigen_result_FOURIER = face_recognizer_eigenfaces.predict(rostro_resized)
+
+                # Aplicamos mayor peso a LBPH y menor peso a Fisherfaces y Eigenfaces, porque LBPH es más preciso
+                confidences = [
+                    lbph_result_HSV[1] / 100,
+                    fisher_result_GRAY[1] / 50000,
+                    eigen_result_FOURIER[1] / 50000
+                ]
+
+                # Combinamos resultados usando los pesos
+                total_score = sum(w * c for w, c in zip(individual, confidences))
+                total_scores.append(total_score)
+    return sum(total_scores) / len(total_scores) if total_scores else 0.0
+  ```
+Se definen funciones para mutar y cruzar individuos de manera que los nuevos individuos resultantes también estén normalizados (es decir, la suma de sus pesos sea 1.0) y se inicializa la población, se define la probabilidad de cruce y mutación, y se ejecuta el algoritmo genético.
+
 ---
+
+Al final, los pesos optimizados (**embeddings**) se almacenan en una base de datos MySQL.
+
+Se establece una conexión a la base de datos y se ejecutan las sentencias SQL para crear la estructura necesaria:
+  ```python
+  db_connection = mysql.connector.connect(
+      host="localhost", user="root", password="root", database="datadb"
+  )
+  ```
+
+- **Guardado de los embeddings**:
+  Después de obtener los mejores pesos del algoritmo genético, estos se guardan en la base de datos, convirtiéndolos a formato JSON para almacenarlos de forma eficiente:
+
+```python
+def guardar_embedding(nombre, lbph, eigenfaces, fisherfaces):
+    delete_query = "DELETE FROM mi_tabla WHERE nombre = %s"
+    cursor.execute(delete_query, (nombre,))
+    db_connection.commit()
+
+    lbph_json = json.dumps({"embedding": lbph})
+    eigenfaces_json = json.dumps({"embedding": eigenfaces})
+    fisherfaces_json = json.dumps({"embedding": fisherfaces})
+    
+    query = """
+        INSERT INTO mi_tabla (nombre, lbph, eigenfaces, fisherfaces) 
+        VALUES (%s, %s, %s, %s)
+    """
+    cursor.execute(query, (nombre, lbph_json, eigenfaces_json, fisherfaces_json))
+    db_connection.commit()
+    print(f"Embeddings guardados en la base de datos.")
+
+  ```
+
+
 
 ### 📂 **Estructura del Proyecto**  
 
