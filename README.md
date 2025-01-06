@@ -545,12 +545,14 @@ En orden de relevancia, el segundo modelo con mejor comportamiento fue Eigenface
 
 ### Vídeo resumen de venta del trabajo
 
-<div align="center">
-<video width="640" height="380" controls>
-  <source src="assets/video/video.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+
+
+https://github.com/user-attachments/assets/42d36331-d2b0-4621-b023-2977cae76788
+
+
+[Enlace al video](https://cdn.glitch.global/e09a0fa9-a9d5-442b-a281-52be27442967/Video%20sin%20t%C3%ADtulo%20(1).mp4?v=1736192410934)
+
+También puede verse el video dentro de `assets/video/video.mp4`
 
 ---
 
