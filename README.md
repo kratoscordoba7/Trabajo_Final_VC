@@ -545,13 +545,12 @@ En orden de relevancia, el segundo modelo con mejor comportamiento fue Eigenface
 
 ### Vídeo resumen de venta del trabajo
 
-Aqui debe ir el video
-
-<video width="320" height="240" controls>
-  <source src="movie.mp4" type="video/mp4">
+<div align="center">
+<video width="640" height="380" controls>
+  <source src="assets/video/video.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-
+</div>
 
 ---
 
