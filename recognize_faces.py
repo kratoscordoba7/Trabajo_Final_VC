@@ -1,11 +1,11 @@
-# recognize_faces.py
-
 import cv2
 import os
 import numpy as np
 from collections import deque
 from scipy.optimize import linear_sum_assignment
 import logging
+import json
+import mysql.connector
 
 # Configuración básica de logging
 logging.basicConfig(
@@ -78,10 +78,6 @@ def recognize_faces(
         logging.error("No se encuentran los archivos del modelo DNN en las rutas especificadas.")
         return
     
-    if not os.path.exists(model_lbph_path):
-        logging.error(f"No se encontró el modelo LBPH en {model_lbph_path}.")
-        return
-
     # Cargar nombres de usuarios (carpetas) para mapear IDs a nombres
     image_paths = [
         name for name in os.listdir(data_path) 
@@ -91,14 +87,23 @@ def recognize_faces(
 
     logging.info(f"Nombres de usuarios cargados: {image_paths}")
 
-    # Cargar el reconocedor LBPH
-    face_recognizer = cv2.face.LBPHFaceRecognizer_create()
-    face_recognizer.read(model_lbph_path)
-    logging.info("Modelo LBPH cargado correctamente.")
+    # Cargar el reconocedor fisher
+    face_recognizer_lbph = cv2.face.LBPHFaceRecognizer_create()
+    face_recognizer_lbph.read("./weights/lbph_ycrcb.xml")
+
+    face_recognizer_fisher = cv2.face.FisherFaceRecognizer_create()
+    face_recognizer_fisher.read("./weights/fisherfaces_grayscale.xml")
+    
+    face_recognizer_eigen = cv2.face.EigenFaceRecognizer_create()
+    face_recognizer_eigen.read("./weights/eigenfaces_noise_fourier.xml")
+
+
+    logging.info("LBPH, Eigenfaces, FisherFaces cargado correctamente.")
+
 
     # Cargar el modelo DNN para detección de rostros
     net = cv2.dnn.readNetFromCaffe(model_file, weights_file)
-    logging.info("Modelo DNN cargado correctamente.")
+    logging.info("DNN cargado correctamente.")
 
     # Inicializar la cámara
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
@@ -108,9 +113,57 @@ def recognize_faces(
 
     logging.info("Cámara inicializada correctamente.")
 
+
+    #############################
+    # Si la persona ha entrenado con el archivo genetic_algorithm.py, los pesos cambiaran, en vez de ser estaticos
+    #############################
+
+    lbph_confidence = 0.7
+    eigen_confidence = 0.2
+    fisher_confidence = 0.1
+    umbral_confianza_bd = 0.2
+
+    # Establecer la conexión a la base de datos
+    db_connection = mysql.connector.connect(
+        host="localhost",
+        user="root",     
+        password="root", 
+        database="datadb"
+    )
+
+    # Creamos un cursor para ejecutar sentencias SQL
+    cursor = db_connection.cursor()
+
     # Lista para mantener las identidades de los rostros
     identities = []
     face_id_counter = 0  # Contador para asignar IDs únicos
+
+    # Consultamos para obtener todos los registros
+    query = "SELECT id, nombre, lbph, eigenfaces, fisherfaces FROM mi_tabla"
+    cursor.execute(query)
+
+    # Leemos los registros
+    resultados = cursor.fetchall()
+
+    for row in resultados:
+        id, nombre, lbph_json, eigenfaces_json, fisherfaces_json = row
+        lbph_data = json.loads(lbph_json)  # Convertimos el JSON a un diccionario
+        eigenfaces_data = json.loads(eigenfaces_json)
+        fisherfaces_data = json.loads(fisherfaces_json)
+
+        lbph_embedding = np.array(lbph_data["embedding"])
+        eigenfaces_embedding = np.array(eigenfaces_data["embedding"])
+        fisherfaces_embedding = np.array(fisherfaces_data["embedding"])
+
+        lbph_confidence =lbph_embedding
+        eigen_confidence = eigenfaces_embedding
+        fisher_confidence = fisherfaces_embedding
+        umbral_confianza_bd = 0.4
+
+    # Cerrar la conexión
+    cursor.close()
+    db_connection.close()
+
 
     while True:
         ret, frame = cap.read()
@@ -248,17 +301,26 @@ def recognize_faces(
                     rostro = frame[y:y1, x:x1]
                     rostro_gray = cv2.cvtColor(rostro, cv2.COLOR_BGR2GRAY)
                     rostro_resized = cv2.resize(rostro_gray, (150, 150), interpolation=cv2.INTER_CUBIC)
-                    
-                    # Predecir con LBPH
-                    result = face_recognizer.predict(rostro_resized)
-                    predicted_label, confidence_label = result[0], result[1]
+                                        
+                    result_fisher = face_recognizer_fisher.predict(rostro_resized)
+                    predicted_label_fisher, confidence_label_fisher = result_fisher[0], result_fisher[1]
 
-                    # Determinar etiqueta
-                    if confidence_label < 70:
-                        label_name = image_paths[predicted_label]
+                    result_eigen = face_recognizer_eigen.predict(rostro_resized)
+                    predicted_label_eigen, confidence_label_eigen = result_eigen[0], result_eigen[1]
+
+                    result_lbph = face_recognizer_lbph.predict(rostro_resized)
+                    predicted_label_lbph, confidence_label_lbph = result_lbph[0], result_lbph[1]
+
+
+
+                    logging.info(f"Resultado :{umbral_confianza_bd},  {((confidence_label_lbph < 70) * lbph_confidence) + ((confidence_label_eigen < 3800) * eigen_confidence) + ((confidence_label_fisher < 2500) * fisher_confidence)}")
+
+                    if(((confidence_label_lbph < 70) * lbph_confidence) + ((confidence_label_eigen < 3800) * eigen_confidence) + ((confidence_label_fisher < 2500) * fisher_confidence) > umbral_confianza_bd):
+                        label_name = image_paths[predicted_label_lbph]
                     else:
                         label_name = "Desconocido"
 
+                    logging.info(f"lbph_result {confidence_label_lbph < 70}, eigen_result {confidence_label_eigen < 3800}, fisher_result {confidence_label_fisher < 2500}")
                     # Añadir al buffer de etiquetas solo si no está confirmada
                     if identity.confirmed_label is None:
                         identity.labels.append(label_name)
